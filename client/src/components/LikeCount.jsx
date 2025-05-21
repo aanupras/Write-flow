@@ -29,7 +29,7 @@ const LikeCount = ({ props }) => {
                 return showToast('error', 'Please login into your account.')
             }
 
-            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/blog-like/do-like`, {
+            const response = await fetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog-like/do-like`, {
                 method: 'post',
                 credentials: 'include',
                 headers: { 'Content-type': "application/json" },
