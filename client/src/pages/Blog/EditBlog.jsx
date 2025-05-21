@@ -28,12 +28,12 @@ const EditBlog = () => {
     const { blogid } = useParams()
     const navigate = useNavigate()
     const user = useSelector((state) => state.user)
-    const { data: categoryData } = useFetch(`${getEvn('VITE_API_BASE_URL')}/category/all-category`, {
+    const { data: categoryData } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/category/all-category`, {
         method: 'get',
         credentials: 'include'
     })
 
-    const { data: blogData, loading: blogLoading } = useFetch(`${getEvn('VITE_API_BASE_URL')}/blog/edit/${blogid}`, {
+    const { data: blogData, loading: blogLoading } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog/edit/${blogid}`, {
         method: 'get',
         credentials: 'include'
     }, [blogid])
