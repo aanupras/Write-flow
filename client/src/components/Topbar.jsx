@@ -43,7 +43,7 @@ const Topbar = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/auth/logout`, {
+            const response = await fetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/auth/logout`, {
                 method: 'get',
                 credentials: 'include',
             })
