@@ -35,7 +35,7 @@ const SignUp = () => {
 
     async function onSubmit(values) {
         try {
-            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/auth/register`, {
+            const response = await fetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/auth/register`, {
                 method: 'post',
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify(values)
