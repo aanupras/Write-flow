@@ -22,7 +22,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import moment from 'moment'
 const BlogDetails = () => {
     const [refreshData, setRefreshData] = useState(false)
-    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/blog/get-all`, {
+    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog/get-all`, {
         method: 'get',
         credentials: 'include'
     }, [refreshData])
