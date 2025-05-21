@@ -7,7 +7,7 @@ import { useSearchParams } from 'react-router-dom'
 const SearchResult = () => {
     const [searchParams] = useSearchParams()
     const q = searchParams.get('q')
-    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/blog/search?q=${q}`, {
+    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog/search?q=${q}`, {
         method: 'get',
         credentials: 'include'
     })
