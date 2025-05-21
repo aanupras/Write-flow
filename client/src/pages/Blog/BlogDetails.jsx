@@ -28,7 +28,7 @@ const BlogDetails = () => {
     }, [refreshData])
 
     const handleDelete = (id) => {
-        const response = deleteData(`${getEvn('VITE_API_BASE_URL')}/blog/delete/${id}`)
+        const response = deleteData(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog/delete/${id}`)
         if (response) {
             setRefreshData(!refreshData)
             showToast('success', 'Data deleted.')
