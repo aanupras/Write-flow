@@ -23,7 +23,7 @@ app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: 'https://write-flow-client.onrender.com',
     credentials: true
 }))
 
