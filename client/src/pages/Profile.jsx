@@ -24,7 +24,7 @@ const Profile = () => {
     const [file, setFile] = useState()
     const user = useSelector((state) => state.user)
 
-    const { data: userData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/user/get-user/${user.user._id}`,
+    const { data: userData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/user/get-user/${user.user._id}`,
         { method: 'get', credentials: 'include' },
 
     )
