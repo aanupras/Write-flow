@@ -35,7 +35,7 @@ const SignIn = () => {
 
     async function onSubmit(values) {
         try {
-            const response = await fetch(`${getEvn('VITE_API_BASE_URL')}/auth/login`, {
+            const response = await fetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/auth/login`, {
                 method: 'post',
                 headers: { 'Content-type': 'application/json' },
                 credentials: 'include',
