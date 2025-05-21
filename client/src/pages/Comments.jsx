@@ -22,7 +22,7 @@ import { showToast } from '@/helpers/showToast'
 
 const Comments = () => {
     const [refreshData, setRefreshData] = useState(false)
-    const { data, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/comment/get-all-comment`, {
+    const { data, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/comment/get-all-comment`, {
         method: 'get',
         credentials: 'include'
     }, [refreshData])
