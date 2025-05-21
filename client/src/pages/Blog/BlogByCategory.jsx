@@ -8,7 +8,7 @@ import { BiCategory } from "react-icons/bi";
 
 const BlogByCategory = () => {
     const { category } = useParams()
-    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/blog/get-blog-by-category/${category}`, {
+    const { data: blogData, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/blog/get-blog-by-category/${category}`, {
         method: 'get',
         credentials: 'include'
     }, [category])
