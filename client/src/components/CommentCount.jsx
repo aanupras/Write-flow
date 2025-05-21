@@ -3,7 +3,7 @@ import { useFetch } from '@/hooks/useFetch'
 import React from 'react'
 import { FaRegComment } from "react-icons/fa";
 const CommentCount = ({ props }) => {
-    const { data, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL')}/comment/get-count/${props.blogid}`, {
+    const { data, loading, error } = useFetch(`${getEvn('VITE_API_BASE_URL || https://write-flow-api.onrender.com')}/comment/get-count/${props.blogid}`, {
         method: 'get',
         credentials: 'include',
     })
